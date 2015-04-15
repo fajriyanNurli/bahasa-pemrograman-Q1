@@ -1,0 +1,59 @@
+import java.io.*;
+public class tiketpesawat {
+ public static void main(String[]args)throws Exception {
+   BufferedReader inputan = new BufferedReader(new InputStreamReader(System.in));
+   int eko = 0;
+   int bis = 0;
+   int eks = 0;
+   int vip = 0;
+   double total = 0;
+   int baris = 0;
+   int jumlahtiket = 0;
+   String kls ;
+   
+   System.out.println("=================================");
+   System.out.println(" Aplikasi Penjualan Tiket Pesawat");
+   System.out.println("=================================");
+   System.out.print    ("1. Masukan jumlah tiket      :");
+   jumlahtiket = Integer.parseInt(inputan.readLine());
+   System.out.println("=================================");
+   System.out.println(" Aplikasi Penjualan Tiket Pesawat");
+   System.out.println("=================================");
+   System.out.println ("->ekonomi");
+   System.out.println ("->bisnis");
+   System.out.println ("->eksekutif");
+   System.out.println ("->vip");
+   System.out.print   ("1. Masukan kelas pesawat      :");
+   kls = inputan.readLine();
+   if (kls.equals("ekonomi")){ 
+    System.out.println ("Ekonomi : " + jumlahtiket*100000 );
+    total = jumlahtiket*100000;
+                System.out.println ("Masukan barisan pilihan anda (10-13) : ");
+                baris = Integer.parseInt(inputan.readLine());
+    }
+   else if (kls.equals("bisnis")){ 
+    System.out.println ("Bisnis : " + jumlahtiket*150000);
+    total = jumlahtiket*150000;
+                System.out.println ("Masukan barisan pilihan anda (6-9) : ");
+    baris = Integer.parseInt(inputan.readLine());    
+    }
+   else if (kls.equals("eksekutif")){ 
+    System.out.println ("Eksekutif : " + jumlahtiket*225000);
+    total = jumlahtiket*225000;
+                System.out.println ("Masukan barisan pilihan anda (3-5) : ");
+    baris = Integer.parseInt(inputan.readLine());     
+    }
+   else if (kls.equals("vip")){ 
+    System.out.println ("vip : " + jumlahtiket*262500);
+    total = jumlahtiket*262500;
+                System.out.println ("Masukan barisan pilihan anda (1-2) : ");
+    baris = Integer.parseInt(inputan.readLine()); 
+    }
+   System.out.println("=================================");
+   System.out.println(" kelas       :"+ kls);
+   System.out.println(" harga tiket :"+ jumlahtiket);
+   System.out.println(" total       :"+total);
+   System.out.println(" baris       :"+ baris);
+   System.out.println("=================================");   
+   }  
+  }
